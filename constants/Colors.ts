@@ -1,26 +1,30 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+interface Color {
+  primaryRedHex: string;
+  primaryOrangeHex: string;
+  primaryBlackHex: string;
+  primaryDarkGreyHex: string;
+  secondaryDarkGreyHex: string;
+  primaryGreyHex: string;
+  secondaryGreyHex: string;
+  primaryLightGreyHex: string;
+  secondaryLightGreyHex: string;
+  primaryWhiteHex: string;
+  primaryBlackRGBA: string;
+  secondaryBlackRGBA: string;
+}
 
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+export const COLORS: Color = {
+  primaryRedHex: "#DC3 535",
+  primaryOrangeHex: "#D17842",
+  primaryBlackHex: "#0C0F14",
+  primaryDarkGreyHex: "#141921",
+  secondaryDarkGreyHex: "#21262E",
+  primaryGreyHex: "#252A32",
+  secondaryGreyHex: "#252A32",
+  primaryLightGreyHex: "#52555A",
+  secondaryLightGreyHex: "#AEAEAE",
+  primaryWhiteHex: "#FFFFFF",
+  primaryBlackRGBA: "rgba(12,15,20,0.5)",
+  secondaryBlackRGBA: "rgba(0,0,0,0.7)",
 };
