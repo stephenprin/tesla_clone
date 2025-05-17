@@ -1,13 +1,10 @@
+import menuOptions from "@/assets/menuOptions";
+import Controls from "@/components/Controls";
+import MenuOption from "@/components/MenuOption";
 import ScreenWrapper from "@/components/ScreenWrapper";
-import {
-  Entypo,
-  FontAwesome,
-  FontAwesome5,
-  Ionicons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 
 const index = () => {
   return (
@@ -26,16 +23,14 @@ const index = () => {
         resizeMode="contain"
       />
 
-      <View style={styles.controls}>
-        <Entypo name="lock" size={26} color="gray" />
-        <MaterialCommunityIcons name="fan" size={26} color="gray" />
-        <FontAwesome5 name="bolt" size={26} color="gray" />
-        <Ionicons name="car-sport-sharp" size={26} color="gray" />
-          </View>
-          
-          <View style={optionRow}>
-              
-          </View>
+      <Controls />
+
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={menuOptions}
+        keyExtractor={(item) => item.name}
+        renderItem={MenuOption}
+      />
     </ScreenWrapper>
   );
 };
@@ -65,10 +60,5 @@ const styles = StyleSheet.create({
   image: {
     width: "110%",
     height: 300,
-  },
-  controls: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginTop: 20,
   },
 });

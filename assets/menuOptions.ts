@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Controls',
-    iconName: 'car',
+    iconName: 'car-key',
     href: '/controls',
   },
   {
